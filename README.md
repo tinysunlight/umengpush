@@ -1,4 +1,3 @@
-# umengpush
 # 在官方文档基础上修改了一些内容：
 - 修复 adr 部分发送 nofication 的 bug。
 - ios 支持10.0的主标题
