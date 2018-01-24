@@ -1,2 +1,5 @@
 # umengpush
-在官方文档基础上支持python3版本，支持 ios 10 增加了标题
+# 在官方文档基础上修改了一点：
+- adr 部分修复了一个 bug，原来 unicast 的 nofication 会报错
+- ios 支持10.0的主标题
+- 支持了python3.0
