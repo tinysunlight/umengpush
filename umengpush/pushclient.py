@@ -25,7 +25,7 @@ class PushClient(object):
         msg.setPredefinedKeyValue("timestamp", timestamp);
         postBody = msg.getPostBody()
         sign = self.__md5('{}{}{}{}'.format('POST', self.API_URL, postBody, msg.appMasterSecret))
-        print(sign, postBody)
+#        print(sign, postBody)
         r = requests.post(self.API_URL + '?sign=' + sign, data=postBody)
-        print (r.status_code, r.text)
+#        print (r.status_code, r.text)
         return r
