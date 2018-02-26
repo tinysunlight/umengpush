@@ -28,6 +28,8 @@ class UmengNotification(object):
     CONSTR_FEEDBACK = "feedback"
     CONSTR_DESCRIPTION = "description"
     CONSTR_THIRDPARTY_ID = "thirdparty_id"
+    CONSTR_MI_PUSH = 'mipush'
+    CONSTR_MI_ACTIVITY = 'mi_activity'
 
     # policy key constartion string
     CONSTR_START_TIME = "start_time"
@@ -41,7 +43,8 @@ class UmengNotification(object):
 	#		"filter", "production_mode", "feedback", "description", "thirdparty_id"]
     #POLICY_KEYS = ["start_time", "expire_time", "max_send_num"]
     ROOT_KEYS = [CONSTR_APPKEY, CONSTR_TIMESTAMP, CONSTR_TYPE, CONSTR_DEVICE_TOKENS, CONSTR_ALIAS, CONSTR_ALIAS_TYPE,
-                 CONSTR_FILE_ID, CONSTR_FILTER, CONSTR_PRODUCTION_MODE, CONSTR_FEEDBACK, CONSTR_DESCRIPTION, CONSTR_THIRDPARTY_ID]
+                 CONSTR_FILE_ID, CONSTR_FILTER, CONSTR_PRODUCTION_MODE, CONSTR_FEEDBACK, CONSTR_DESCRIPTION,
+                 CONSTR_THIRDPARTY_ID, CONSTR_MI_PUSH, CONSTR_MI_ACTIVITY]
     POLICY_KEYS = [CONSTR_START_TIME, CONSTR_EXPIRE_TIME, CONSTR_MAX_SEND_NUM]
 
     rootJson = json.loads(CONSTR_EMPTY_JSON);
@@ -78,6 +81,12 @@ class UmengNotification(object):
 
     def setAppKey(self, appkey):
         self.appKey = appkey
+
+    def setMiPush(self, value):
+        self.setPredefinedKeyValue(self.CONSTR_MI_PUSH, value)
+
+    def setMiActivity(self, value):
+        self.setPredefinedKeyValue(self.CONSTR_MI_ACTIVITY, value)
 
     def setProductionMode(self):
         self.productionMode = True
