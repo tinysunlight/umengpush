@@ -4,6 +4,8 @@
 - ios 支持10.0的主标题
 - 支持了python3.0
 - 暂时只是满足了我的需求，如果有需要可以联系我（held911@163.com）。
+- test gitlab
+- test gitlab2
 # 例子
 - 参考demo
 # 参考文档
